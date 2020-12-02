@@ -458,6 +458,9 @@ int BasicCPU::EXF()
 			case ALUctrlFlag::SUB:
 				ALUout = Util::floatAsUint64Low(fA - fB);
 				return 0;
+			case ALUctrlFlag::ADD:
+				ALUout = Util::floatAsUint64Low(fA + fB);
+				return 0;
 			default:
 				// Controle não implementado
 				return 1;
